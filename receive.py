@@ -1,4 +1,8 @@
-# -*- coding: utf-8 -*-# filename: receive.pyimport xml.etree.ElementTree as ETdef parse_xml(web_data):
+# -*- coding: utf-8 -*-
+# filename: receive.py
+import xml.etree.ElementTree as ET
+
+def parse_xml(web_data):
     if len(web_data) == 0:
         return None
     xmlData = ET.fromstring(web_data)
