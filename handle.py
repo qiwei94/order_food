@@ -15,7 +15,7 @@ class Handle(object):
             timestamp = data.timestamp
             nonce = data.nonce
             echostr = data.echostr
-            token = "xxxx" #请按照公众平台官网\基本配置中信息填写
+            token = "1234" #请按照公众平台官网\基本配置中信息填写
 
             list = [token, timestamp, nonce]
             list.sort()
@@ -29,12 +29,12 @@ class Handle(object):
                 return ""
         except Exception, Argument:
             return Argument
-            
+
     def POST(self):
         try:
             webData = web.data()
             print "Handle Post webdata is ", webData
-   #后台打日志
+            #后台打日志
             recMsg = receive.parse_xml(webData)
             if isinstance(recMsg, receive.Msg) and recMsg.MsgType == 'text':
                 toUser = recMsg.FromUserName
